@@ -1,7 +1,5 @@
 package eclipse.project.overlay.views;
 
-import javax.swing.*;
-
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -71,8 +69,19 @@ public class MainViewPerso extends ViewPart{
 	    	}
 	    });
 	    
-
+	    Group groupTraitement = new Group(parent, SWT.NONE);
+	    groupTraitement.setLayout (new GridLayout(2, false) );
+	    groupTraitement.setText ("Traitement vidéo");
+	    
+	    Label videoTraitmentLabel = new Label(groupTraitement, SWT.NONE);
+	    videoTraitmentLabel.setText("Traitement appliqué : ");
 		
+	    final Combo videoTraitmentValue = new Combo(groupTraitement, SWT.READ_ONLY);
+	    videoTraitmentValue.add("Sépia");
+	    videoTraitmentValue.add("Noir & Blanc");
+		myGridData = new GridData(GridData.FILL_HORIZONTAL);
+		videoTraitmentValue.setLayoutData(myGridData);
+	    
 		Group groupSocial = new Group(parent, SWT.NONE);
 		groupSocial.setLayout (new GridLayout(2, false) );
 		groupSocial.setText ("Réseau Social");
@@ -89,7 +98,6 @@ public class MainViewPerso extends ViewPart{
 
 		Group groupControl = new Group(parent, SWT.NONE);
 		groupControl.setLayout (new GridLayout(2, false) );
-		//groupControl.setText ("Capture Vidéo");
 		
 		Button acceptButton = new Button(groupControl, SWT.PUSH);
 		acceptButton.setText("Accept");

@@ -5,7 +5,9 @@ Bundle-SymbolicName: eclipse.project.Overlay; singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: eclipse.project.overlay.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ ImageFromVideo;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: eclipse.project.overlay
+Export-Package: eclipse.project.overlay,
+ eclipse.project.overlay.interfaces

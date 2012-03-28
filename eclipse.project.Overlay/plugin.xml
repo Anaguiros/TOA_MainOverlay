@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="imageProvider" name="imageProvider" schema="schema/imageProvider.exsd"/>
 
    <extension
          point="org.eclipse.ui.views">
@@ -14,6 +15,13 @@
             category="eclipse.project.Overlay"
             class="eclipse.project.overlay.views.MainViewPerso"
             id="eclipse.project.overlay.views.MainView">
+      </view>
+      <view
+            category="eclipse.project.Overlay"
+            class="eclipse.project.overlay.views.ImageView"
+            icon="icons/sample.gif"
+            id="eclipse.project.overlay.views.ImageView"
+            name="Vue image">
       </view>
    </extension>
    <extension
